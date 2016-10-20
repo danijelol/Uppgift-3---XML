@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Portfölj>
+  <LargeCap>
+    <Aktie Aktietyp="B">
+      <Aktienamn>Volvo B</Aktienamn>
+      <Köp>96</Köp>
+      <Sälj>97</Sälj>
+    </Aktie>
+    <Aktie Aktietyp="B">
+      <Aktienamn>Hennes &amp; Mauritz B</Aktienamn>
+      <Köp>255</Köp>
+      <Sälj>256</Sälj>
+    </Aktie>
+    <Aktie Aktietyp="B">
+      <Aktienamn>Boliden</Aktienamn>
+      <Köp>205</Köp>
+      <Sälj>206</Sälj>
+    </Aktie>
+    <Aktie Aktietyp="A">
+      <Aktienamn>Ericsson A</Aktienamn>
+      <Köp>48</Köp>
+      <Sälj>49</Sälj>
+    </Aktie>
+    <Aktie Aktietyp="B">
+      <Aktienamn>Ericsson B</Aktienamn>
+      <Köp>47</Köp>
+      <Sälj>48</Sälj>
+    </Aktie>
+  </LargeCap>
+  <MidCap>
+    <Aktie Aktietyp="B">
+      <Aktienamn>Active Biotech</Aktienamn>
+      <Köp>10</Köp>
+      <Sälj>11</Sälj>
+    </Aktie>
+    <Aktie Aktietyp="B">
+      <Aktienamn>Clas Ohlson B</Aktienamn>
+      <Köp>130</Köp>
+      <Sälj>131</Sälj>
+    </Aktie>
+    <Aktie Aktietyp="B">
+      <Aktienamn>SkiStar B</Aktienamn>
+      <Köp>140</Köp>
+      <Sälj>141</Sälj>
+    </Aktie>
+    <Aktie Aktietyp="A">
+      <Aktienamn>Creades A</Aktienamn>
+      <Köp>217</Köp>
+      <Sälj>218</Sälj>
+    </Aktie>
+    <Aktie Aktietyp="B">
+      <Aktienamn>Beijer Alma B</Aktienamn>
+      <Köp>211</Köp>
+      <Sälj>212</Sälj>
+    </Aktie>
+  </MidCap>
+  <SmallCap>
+    <Aktie Aktietyp="A">
+      <Aktienamn>Midsona A</Aktienamn>
+      <Köp>86</Köp>
+      <Sälj>89</Sälj>
+    </Aktie>
+    <Aktie Aktietyp="A">
+      <Aktienamn>AllTele A</Aktienamn>
+      <Köp>13</Köp>
+      <Sälj>14</Sälj>
+    </Aktie>
+    <Aktie Aktietyp="B">
+      <Aktienamn>Avega Group B</Aktienamn>
+      <Köp>20</Köp>
+      <Sälj>21</Sälj>
+    </Aktie>
+    <Aktie Aktietyp="B">
+      <Aktienamn>Dedicare B</Aktienamn>
+      <Köp>67</Köp>
+      <Sälj>68</Sälj>
+    </Aktie>
+    <Aktie Aktietyp="B">
+      <Aktienamn>Poolia B</Aktienamn>
+      <Köp>15</Köp>
+      <Sälj>16</Sälj>
+    </Aktie>
+  </SmallCap>
+</Portfölj>
