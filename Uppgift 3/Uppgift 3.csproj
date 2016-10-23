@@ -94,11 +94,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="aktier.xml" />
-    <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="aktier.xml">
+      <SubType>Designer</SubType>
     </Content>
+    <Content Include="packages.config" />
     <Content Include="Site1.Master" />
     <Content Include="index.aspx" />
     <None Include="Web.Debug.config">

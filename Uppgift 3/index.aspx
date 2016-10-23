@@ -19,7 +19,7 @@
     <asp:Button ID="btnFiltrera" runat="server" OnClick="btnFiltrera_Click" Text="Filtrera" /><br /><br />
 
 
-                <div id="aktieDiv" runat="server">Här ska aktierna visas:</div>
-    <asp:TextBox ID="txtXml" runat="server" TextMode="MultiLine" Height="500px" Width="600px" />
+                <div id="aktieDiv" runat="server">Här nedan kommer aktierna visas:</div>
+<%--    <asp:TextBox ID="txtXml" runat="server" TextMode="MultiLine" Height="500px" Width="600px" />--%>
 
 </asp:Content>

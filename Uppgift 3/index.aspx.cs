@@ -14,64 +14,15 @@ namespace Uppgift_3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //XmlSwitchCase();
 
-            //aktieDiv.InnerHtml
-
-            string sökväg = Server.MapPath("aktier.xml");
-            XmlDocument doc = new XmlDocument();
-            doc.Load(sökväg);
-
-            txtXml.Text = doc.OuterXml;
         }
 
         protected void btnFiltrera_Click(object sender, EventArgs e)
         {
-            //LäggTillAllaAktier(XmlTillLista());
-
+            LäggTillAllaAktier(XmlTillLista());
 
         }
 
-
-        public void XmlSwitchCase()
-        {
-            string aktier = "";
-            string sökväg = Server.MapPath("aktier.xml");
-
-            XmlTextReader xreader = new XmlTextReader(sökväg);
-
-            while (xreader.Read())
-            {
-                switch (xreader.Name)
-                {
-                    case "Aktienamn":
-                        aktier += xreader.ReadString() + " ";
-                        break;
-                }
-                switch (xreader.Name)
-                {
-                    case "Aktietyp":
-                        aktier += xreader.ReadString() + " ";
-                        break;
-                }
-                switch (xreader.Name)
-                {
-                    case "Köp":
-                        aktier += xreader.ReadString() + " ";
-                        break;
-                }
-                switch (xreader.Name)
-                {
-                    case "Sälj":
-                        aktier += xreader.ReadString() + " ";
-                        break;
-                }
-
-
-            }
-
-            aktieDiv.InnerHtml = aktier;
-        }
 
         public void LäggTillAllaAktier(List<Aktier> aktielista)
         {
@@ -104,53 +55,19 @@ namespace Uppgift_3
             List<Aktier> aktielista = new List<Aktier>();
 
             string sökväg = Server.MapPath("aktier.xml");
-            string nodSökväg;
             
             XmlDocument doc = new XmlDocument();
             doc.Load(sökväg);
-            XmlNodeList allaAktier = null;
-
-            XmlNode root = doc.DocumentElement;
-
-
+            XmlNodeList allaAktier;
 
             if (valCap.SelectedValue == "1") //Visa alla
             {
 
-                allaAktier = doc.SelectNodes("/Portfölj/LargeCap/Aktie");
+                allaAktier = doc.SelectNodes("/Portfölj/*/Aktie");
 
                 foreach (XmlNode node in allaAktier)
                 {
 
-                    //aktieDiv.InnerText = "Node: " + node.Name;
-                    Aktier a = new Aktier();
-                    a.Aktietyp = node.Attributes["Aktietyp"].InnerText;
-                    a.Aktienamn = node["Aktienamn"].InnerText;
-                    a.Köp = Convert.ToInt32(node["Köp"].InnerText);
-                    a.Sälj = Convert.ToInt32(node["Sälj"].InnerText);
-
-                    aktielista.Add(a);
-
-                }
-
-                allaAktier = doc.SelectNodes("/Portfölj/MidCap/Aktie");
-
-                foreach (XmlNode node in allaAktier)
-                {
-                    Aktier a = new Aktier();
-                    a.Aktietyp = node.Attributes["Aktietyp"].InnerText;
-                    a.Aktienamn = node["Aktienamn"].InnerText;
-                    a.Köp = Convert.ToInt32(node["Köp"].InnerText);
-                    a.Sälj = Convert.ToInt32(node["Sälj"].InnerText);
-
-                    aktielista.Add(a);
-
-                }
-
-                allaAktier = doc.SelectNodes("/Portfölj/SmallCap/Aktie");
-
-                foreach (XmlNode node in allaAktier)
-                {
                     Aktier a = new Aktier();
                     a.Aktietyp = node.Attributes["Aktietyp"].InnerText;
                     a.Aktienamn = node["Aktienamn"].InnerText;
@@ -211,7 +128,6 @@ namespace Uppgift_3
 
                 }
             }
-
 
             return aktielista;
 
